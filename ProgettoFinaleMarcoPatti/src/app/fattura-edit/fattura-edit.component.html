@@ -13,7 +13,7 @@
     </div>
     <div class="form-group">
         <label for="name"><b>Importo Fattura</b></label>
-        <input type="text"[(ngModel)]="fattura.importo" name="naggfme" class="form-control">
+        <input type="number"[(ngModel)]="fattura.importo" name="naggfme" class="form-control">
     </div>
     <div class="form-group">
         <label for="name"><b>Stato Fattura</b></label>
@@ -33,7 +33,7 @@
     </div>
     <div class="form-group">
         <label for="name"><b>Telefono Contatto</b></label>
-        <input type="text"[(ngModel)]="fattura.cliente.telefonoContatto" name="telefono" class="form-control" id="fdgfdg">
+        <input type="tel"[(ngModel)]="fattura.cliente.telefonoContatto" name="telefono" class="form-control" id="fdgfdg">
     </div>
     <div class="form-group">
         <label for="name"><b>Pec</b></label>
@@ -50,7 +50,7 @@
     
     <div class="form-group">
         <label for="name"><b>Numero telefono</b></label>
-        <input type="text"[(ngModel)]="fattura.cliente.telefono" name="tele" class="form-control" id="sfgsas">
+        <input type="tel"[(ngModel)]="fattura.cliente.telefono" name="tele" class="form-control" id="sfgsas">
     </div>
     <div class="form-group">
         <label for="name"><b>Data Inserimento</b></label>
@@ -71,14 +71,14 @@
     -->
     <label for="indirizzo1"><b>Indirizzo sede operativa :</b></label> &nbsp;
     <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.via" name="via" placeholder="Inserisci via.." class="form mb-2">&nbsp;
-    <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.civico" name="civico" placeholder="Inserisci civico.." class="form mb-2">&nbsp;
-    <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.cap" name="cap" placeholder="Inserisci cap.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.civico" name="civico" placeholder="Inserisci civico.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.cap" name="cap" placeholder="Inserisci cap.." class="form mb-2">&nbsp;
     <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeOperativa.localita" name="localita" placeholder="Inserisci località.." class="form mb-2"> &nbsp;   
     <br>
     <label for="indirizzo1"><b>Indirizzo sede legale :</b></label> &nbsp;
     <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.via" name="via2" placeholder="Inserisci via.." class="form mb-2">&nbsp;
-    <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.civico" name="civico3" placeholder="Inserisci civico.." class="form mb-2">&nbsp;
-    <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.cap" name="cap4" placeholder="Inserisci cap.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.civico" name="civico3" placeholder="Inserisci civico.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.cap" name="cap4" placeholder="Inserisci cap.." class="form mb-2">&nbsp;
     <input type="text" [(ngModel)]="fattura.cliente.indirizzoSedeLegale.localita" name="localita5" placeholder="Inserisci località.." class="form mb-2">&nbsp;
     <button type="button" class="btn bg-warning form-control" (click)="update()">Applica Modifiche &nbsp;<i class="bi bi-pencil-square"></i></button>
 </form>

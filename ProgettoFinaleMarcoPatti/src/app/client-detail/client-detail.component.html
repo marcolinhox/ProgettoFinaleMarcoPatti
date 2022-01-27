@@ -27,15 +27,20 @@
       <p class="card-text bg-success"><b>Localita :</b> : {{clients.indirizzoSedeLegale.localita}}</p>
       <button type="button" class="btn btn-warning"(click)="edit(clients)"><i class="bi bi-pencil-fill"></i></button>
     </div>
-    <div>
-      <h3>Fatture di questo cliente : </h3>
-        <ul>
-          <li *ngFor="let item of fattura">
-            <a href="#" [routerLink]="['fatture', item.id , 'detail']">{{item.data}}</a>
-            
-          </li>
-        </ul>
-    </div>
+    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+    <div class="card-header"><b>Fatture di questo cliente</b> :</div>
+      <div class="card-body">
+        <div>
+          
+            <ul>
+              <li *ngFor="let item of fattura">
+                <a href="#" [routerLink]="['fatture', item.id , 'detail']">{{item.data}}</a>
+                
+              </li>
+            </ul>
+        </div>
+        
+      </div>
   </div>
   
 

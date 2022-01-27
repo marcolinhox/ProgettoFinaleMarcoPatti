@@ -5,7 +5,7 @@
     <div class="card-body bg-info">
         <input type="number" [(ngModel)]="fattura.numero" name="numeroFattura" placeholder="numero fattura">
         <input type="number" [(ngModel)]="fattura.anno" name="annoFattura" placeholder="anno fattura..">
-        <input type="string" [(ngModel)]="fattura.importo" name="importoFattura" placeholder="importo fattura..">
+        <input type="number" [(ngModel)]="fattura.importo" name="importoFattura" placeholder="importo fattura..">
         <select [(ngModel)]="fattura.stato" [ngModelOptions]="{standalone: true}">
             <option [ngValue]="item" *ngFor="let item of stato">
                 {{item.nome}}
