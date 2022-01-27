@@ -1,4 +1,4 @@
-<div class="card bg-info">
+<div class="card bg-secondary">
     <div class="card-header bg-dark">
      Nome cliente : <h3><b>{{clients.nomeContatto}}</b></h3>
     </div>
@@ -25,10 +25,10 @@
       <p class="card-text bg-success"><b>Civico :</b> : {{clients.indirizzoSedeLegale.civico}}</p>
       <p class="card-text bg-success"><b>Cap :</b> : {{clients.indirizzoSedeLegale.cap}}</p>
       <p class="card-text bg-success"><b>Localita :</b> : {{clients.indirizzoSedeLegale.localita}}</p>
-      <button type="button" class="btn btn-warning"(click)="edit(clients)"><i class="bi bi-pencil-fill"></i></button>
+      <button type="button" class="btn btn-warning form-control"(click)="edit(clients)"><i class="bi bi-pencil-fill"></i></button>
     </div>
-    <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-    <div class="card-header"><b>Fatture di questo cliente</b> :</div>
+    <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header bg-dark"><b>Fatture di questo cliente</b> :</div>
       <div class="card-body">
         <div>
           

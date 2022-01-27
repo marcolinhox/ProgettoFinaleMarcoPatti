@@ -2,7 +2,7 @@
     <div class="card-header bg-dark">
         <input type="text" [(ngModel)]="comune.nome" placeholder="Aggiungi nome provincia.."><br>
     </div>
-    <div class="card-body bg-info">
+    <div class="card-body bg-secondary">
         <select [(ngModel)]="comune.provincia" [ngModelOptions]="{standalone: true}">
             <option [ngValue]="item" *ngFor="let item of provincia">{{item.nome}}</option>
         </select>

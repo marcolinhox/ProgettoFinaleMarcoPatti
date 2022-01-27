@@ -1,5 +1,5 @@
 body{
-    background-image: url(../src/assets/dark-blue-wallpaper-preview.jpg);
+    background-image: url(../src/assets/43458bce045d2246523734e0c9f12b1b.png);
     background-size:cover;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -12,10 +12,10 @@ th{
      width: 70px; height: auto; 
 }
 input{
-    border: 6px outset rgb(116, 114, 114)
+    border: 5px outset rgb(116, 114, 114)
 }
 select{
-    border: 6px outset rgb(116, 114, 114)
+    border: 5px outset rgb(116, 114, 114)
 }
 table {
 	border-collapse: collapse;
