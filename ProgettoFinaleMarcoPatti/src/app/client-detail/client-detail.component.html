@@ -1,0 +1,43 @@
+<div class="card bg-info">
+    <div class="card-header bg-dark">
+     Nome cliente : <h3><b>{{clients.nomeContatto}}</b></h3>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title bg-primary"><b>Cognome cliente</b> : {{clients.cognomeContatto}}</h5>
+      <h5 class="card-title bg-primary"><b>Numero cliente</b> : {{clients.telefonoContatto}}</h5>
+      <p class="card-text bg-success"><b>Tipo cliente</b> : {{clients.tipoCliente}}</p>
+      <p class="card-text bg-success"><b>Partita Iva</b> : {{clients.partitaIva}}</p>
+      <p class="card-text bg-success"><b>Email cliente</b> : {{clients.email}}</p>
+      <p class="card-text bg-success"><b>Pec</b> : {{clients.pec}}</p>
+      <p class="card-text bg-success"><b>Ragione sociale</b> : {{clients.ragioneSociale}}</p>
+      <p class="card-text bg-success"><b>dataInserimento</b> : {{clients.dataInserimento}}</p>
+      <p class="card-text bg-success"><b>dataUltimoContatto</b> : {{clients.dataUltimoContatto}}</p>
+
+
+      <label for="indirizzo1"><b>Indirizzo sede operativa :</b></label> &nbsp;
+      <p class="card-text bg-success"><b>Via :</b> : {{clients.indirizzoSedeOperativa.via}}</p>
+      <p class="card-text bg-success"><b>Civico :</b> : {{clients.indirizzoSedeOperativa.civico}}</p>
+      <p class="card-text bg-success"><b>Cap :</b> : {{clients.indirizzoSedeOperativa.cap}}</p>
+      <p class="card-text bg-success"><b>Localita </b> : {{clients.indirizzoSedeOperativa.localita}}</p>
+      
+      <label for="indirizzo1"><b>Indirizzo sede legale :</b></label> &nbsp;
+      <p class="card-text bg-success"><b>Via :</b> : {{clients.indirizzoSedeLegale.via}}</p>
+      <p class="card-text bg-success"><b>Civico :</b> : {{clients.indirizzoSedeLegale.civico}}</p>
+      <p class="card-text bg-success"><b>Cap :</b> : {{clients.indirizzoSedeLegale.cap}}</p>
+      <p class="card-text bg-success"><b>Localita :</b> : {{clients.indirizzoSedeLegale.localita}}</p>
+      <button type="button" class="btn btn-warning"(click)="edit(clients)"><i class="bi bi-pencil-fill"></i></button>
+    </div>
+    <div>
+      <h3>Fatture di questo cliente : </h3>
+        <ul>
+          <li *ngFor="let item of fattura">
+            <a href="#" [routerLink]="['fatture', item.id , 'detail']">{{item.data}}</a>
+            
+          </li>
+        </ul>
+    </div>
+  </div>
+  
+
+
+  

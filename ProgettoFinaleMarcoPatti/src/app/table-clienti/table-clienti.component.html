@@ -1,0 +1,47 @@
+<table class="table" class="container">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Ragione Sociale</th>
+        <th scope="col">Partita Iva</th>
+        <th scope="col">Tipo Cliente</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Pec</th>
+        <th scope="col">Nome Contatto</th>
+        <th scope="col">Cognome Contatto</th>
+        <th scope="col">Telefono Contatto</th>
+        <th scope="col">Email Contatto</th>
+        <th scope="col">Indirizzo SedeOperativa</th>
+        <th scope="col">Indirizzo SedeLegale</th>
+        <th scope="col">Data Inserimento</th>
+        <th scope="col">Data Ultimo Contatto</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of clients">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.ragioneSociale}}</td>
+        <td>{{item.partitaIva}}</td>
+        <td>{{item.tipoCliente}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.telefono}}</td>
+        <td>{{item.pec}}</td>
+        <td>{{item.nomeContatto}}</td>
+        <td>{{item.cognomeContatto}}</td>
+        <td>{{item.telefonoContatto}}</td>
+        <td>{{item.emailContatto}}</td>
+        <td>{{item.indirizzoSedeOperativa}}</td>
+        <td>{{item.indirizzoSedeLegale}}</td>
+        <td>{{item.dataInserimento}}</td>
+        <td>{{item.dataUltimoContatto}}</td>
+        <td>
+            <button type="button" class="btn btn-danger btn-sm mx-1" (click)="remove(item)"><i class="bi bi-trash"></i></button>
+            
+            <button type="button" class="btn btn-warning btn-sm mx-1" (click)="detail(item)"><i class="bi bi-card-heading"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

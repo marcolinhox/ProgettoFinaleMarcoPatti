@@ -1,0 +1,42 @@
+<div class ="float-right">
+<button id="bottoni" type="button" class="btn-sm" (click)="getByStato()">Filtro Stato</button>
+<button id="bottoni" type="button" class="btn-sm" (click)="getByAnno()">Filtro Anno</button>
+<button id="bottoni" type="button" class="btn-sm" (click)="getByData()">Filtro Data</button>
+<button id="bottoni" type="button" class="btn-sm" (click)="getByImporto()">Filtro Importo</button>
+</div>
+<table class="table table-striped bg-dark table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Data</th>
+      <th scope="col">Numero</th>
+      <th scope="col">Anno</th>
+      <th scope="col">Importo</th>
+      <th scope="col">Stato</th>
+      <th scope="col">Cliente</th>
+      <th>
+
+      </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of fattura">
+      <th>{{item.id}}</th>
+      <td>{{item.data}}</td>
+      <td>{{item.numero}}</td>
+      <td>{{item.anno}}</td>
+      <td>{{item.importo}}</td>
+      <td>{{item.stato.nome}}</td>
+      <td>{{item.cliente.ragioneSociale}}</td>
+
+      <td>
+        <button type="button" class="btn btn-danger btn-sm mx-1" (click)="remove(item)"><i
+            class="bi bi-trash"></i></button>
+        <button type="button" class="btn btn-warning btn-sm mx-1" (click)="detailFattura(item)"><i
+            class="bi bi-card-heading"></i></button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>

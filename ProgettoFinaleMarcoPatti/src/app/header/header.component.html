@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-black bg-dark">
+   <img class="logo" src="/assets/datalogger.png" alt="image">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto"> &nbsp; &nbsp;
+            
+            <li class="nav-item active ">
+                <a class="nav-link" href="#" [routerLink]="['']" routerLinkActive="router-link-active">Clienti </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['/comuni']" routerLinkActive="router-link-active">Comuni</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['/province']" routerLinkActive="router-link-active">Province</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['/fatture']" routerLinkActive="router-link-active">Fatture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['client/new']" routerLinkActive="router-link-active">Nuovo cliente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['province/new']" routerLinkActive="router-link-active">Nuova provincia</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['comune/new']" routerLinkActive="router-link-active">Nuovo comune</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="#" [routerLink]="['fatture/new']" routerLinkActive="router-link-active">Nuova fattura</a>
+            </li>
+
+        
+
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <div class="spinner-border text-light" role="status">
+                <span class="visually-hidden"></span>
+              </div> 
+              &nbsp;
+            <input class="form-control mr-sm-2" type="search" placeholder="Inserisci nominativo.." aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Cerca</button>
+        </form>
+    </div>
+</nav>

@@ -1,0 +1,11 @@
+<ul>
+    <li *ngFor="let item of province">
+    <b>{{item.nome}} {{item.sigla}}</b>
+     <div class="spinner-grow text-primary float-right" role="status">
+        <span class="visually-hidden"></span>
+      </div>
+      <br>
+     <button type="button" class="btn btn-success btn-sm"(click)="detail(item)">Dettaglio <i class="bi bi-bookmarks"></i></button>
+     <button type="button" class="btn btn-danger btn-sm"(click)="delete(item)">Cancella <i class="bi bi-backspace-reverse"></i></button>
+    </li>
+</ul>

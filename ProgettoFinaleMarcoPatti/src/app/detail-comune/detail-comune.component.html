@@ -1,0 +1,12 @@
+<div class="card bg-dark">
+    <div class="card-header bg-info">
+     <b>Nome comune selezionato</b>  :  {{comune.nome}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title bg-info"><b>Numero identificativo</b> : {{comune.id}}</h5>
+      <p class="card-text bg-info"><b>Provincia di</b> : {{comune.provincia.nome}} [ {{comune.provincia.sigla}} ]</p>
+    </div>
+    
+    <button type="button" class="btn-sm btn btn-warning" (click)="edit(comune)">Modifica</button>
+    
+  </div>

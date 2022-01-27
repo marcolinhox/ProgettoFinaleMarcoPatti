@@ -1,0 +1,17 @@
+<div class="card text-center">
+    <div class="card-header bg-dark">
+        <input type="text" [(ngModel)]="comune.nome" placeholder="Aggiungi nome provincia.."><br>
+    </div>
+    <div class="card-body bg-info">
+        <select [(ngModel)]="comune.provincia" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="item" *ngFor="let item of provincia">{{item.nome}}</option>
+        </select>
+        <br><br>
+        
+        <button type="button" class="btn btn-primary btn-sm" (click)="newComune()">Aggiungi <i class="bi bi-arrow-down-square-fill"></i></button>
+    </div>
+    <div class="card-footer text-muted bg-dark">
+      Compila i campi qui sopra per aggiungere un comune
+    </div>
+    <small>NOTA : Attenzione all'inserimento di nuovi comuni, se i campi form hanno dei valori o dei formati diversi da quelli accettati, il comune non verrà aggiunto correttamente</small>
+  </div>

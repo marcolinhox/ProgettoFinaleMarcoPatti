@@ -1,0 +1,71 @@
+<form>
+    <div class="form-group">
+        <label for="name"><b>Nome Contatto</b></label>
+        <input type="text"[(ngModel)]="clients.nomeContatto" name="nomaccio" class="form-control"placeholder="Inserisci nome contatto.." >
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Cognome Contatto</b></label>
+        <input type="text"[(ngModel)]="clients.cognomeContatto" name="cognomaccio" class="form-control" placeholder="Inserisci cognome contatto..">
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Telefono Contatto</b></label>
+        <input type="tel"[(ngModel)]="clients.telefonoContatto" name="telefonino" class="form-control" placeholder="Inserisci telefono contatto..">
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Pec</b></label>
+        <input type="email"[(ngModel)]="clients.pec" name="pek" class="form-control" placeholder="Inserisci pec..">
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Partita Iva</b></label>
+        <input type="number"[(ngModel)]="clients.partitaIva" name="uva" class="form-control" placeholder="Inserisci partita iva..">
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Ragione Sociale</b></label>
+        <input type="text"[(ngModel)]="clients.ragioneSociale" name="social" class="form-control" placeholder="Inserisci ragione sociale..">
+    </div>
+    
+    <div class="form-group">
+        <label for="name"><b>Numero telefono</b></label>
+        <input type="tel"[(ngModel)]="clients.telefono" name="celph" class="form-control" placeholder="Inserisci numero telefono..">
+    </div>
+    
+    <div class="form-group">
+        <label for="name"><b>Email</b></label>
+        <input type="email"[(ngModel)]="clients.email" name="esma" class="form-control" placeholder="Inserisci email..">
+    </div>
+    <div class="form-group">
+        <label for="name"><b>Email contatto</b></label>
+        <input type="email"[(ngModel)]="clients.emailContatto" name="esmi" class="form-control" placeholder="Inserisci email contatto..">
+    </div>
+    
+    <div class="form-group">
+        <label for="name"><b>Tipo Cliente :</b></label> &nbsp;
+       <select [(ngModel)]="clients.tipoCliente" [ngModelOptions]="{standalone: true}">
+           <option [ngValue]="item" *ngFor="let item of tipoCliente" >
+               {{item}} 
+           </option>
+       </select>
+    </div>
+    <label for="indirizzo1"><b>Indirizzo sede operativa :</b></label> &nbsp;
+    <input type="text" [(ngModel)]="clients.indirizzoSedeOperativa.via" name="via" placeholder="Inserisci via.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="clients.indirizzoSedeOperativa.civico" name="civico" placeholder="Inserisci civico.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="clients.indirizzoSedeOperativa.cap" name="cap" placeholder="Inserisci cap.." class="form mb-2">&nbsp;
+    <input type="text" [(ngModel)]="clients.indirizzoSedeOperativa.localita" name="localita" placeholder="Inserisci località.." class="form mb-2"> &nbsp; 
+    <select [(ngModel)]="clients.indirizzoSedeLegale.comune" [ngModelOptions]="{standalone: true}">
+        <option [ngValue]="item" *ngFor="let item of comune">{{item.nome}}</option>
+    </select>  
+    <br>
+    <label for="indirizzo1"><b>Indirizzo sede legale :</b></label> &nbsp;
+    <input type="text" [(ngModel)]="clients.indirizzoSedeLegale.via" name="via2" placeholder="Inserisci via.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="clients.indirizzoSedeLegale.civico" name="civico3" placeholder="Inserisci civico.." class="form mb-2">&nbsp;
+    <input type="number" [(ngModel)]="clients.indirizzoSedeLegale.cap" name="cap4" placeholder="Inserisci cap.." class="form mb-2">&nbsp;
+    <input type="text" [(ngModel)]="clients.indirizzoSedeLegale.localita" name="localita5" placeholder="Inserisci località.." class="form mb-2">&nbsp;
+    <select [(ngModel)]="clients.indirizzoSedeLegale.comune" [ngModelOptions]="{standalone: true}">
+        <option [ngValue]="item" *ngFor="let item of comune">{{item.nome}}</option>
+    </select>
+
+    <div class="form-group">
+        <button type="button" class="btn btn-warning form-control" (click)="new()">Nuovo cliente</button>
+    </div>
+    <small>NOTA : Attenzione all'inserimento di nuovi clienti, se i campi form hanno dei valori o dei formati diversi da quelli accettati, l'utente non verrà aggiunto correttamente</small>
+</form>

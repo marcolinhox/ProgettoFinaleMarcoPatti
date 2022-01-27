@@ -1,0 +1,23 @@
+<div class="card text-center">
+    <div class="card-header bg-dark">
+        <b>Aggiungi fattura</b>
+    </div>
+    <div class="card-body bg-info">
+        <input type="number" [(ngModel)]="fattura.numero" name="numeroFattura" placeholder="numero fattura">
+        <input type="number" [(ngModel)]="fattura.anno" name="annoFattura" placeholder="anno fattura..">
+        <input type="string" [(ngModel)]="fattura.importo" name="importoFattura" placeholder="importo fattura..">
+        <select [(ngModel)]="fattura.stato" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="item" *ngFor="let item of stato">
+                {{item.nome}}
+            </option>
+        </select>
+        <select [(ngModel)]="fattura.cliente" [ngModelOptions]="{standalone: true}">
+            <option [ngValue]="item" *ngFor="let item of clienti">
+                {{item.ragioneSociale}}
+            </option>
+        </select><br><br><br><br>
+
+        <button type="button" class="btn btn-primary" (click)="newFattura()">Aggiungi fattura</button>
+    </div>
+    <small>NOTA : Attenzione all'inserimento di fatture, se i campi form hanno dei valori o dei formati diversi da quelli accettati, la fattura non verrà aggiunta correttamente</small>
+</div>

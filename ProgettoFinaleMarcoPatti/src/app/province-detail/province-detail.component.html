@@ -1,0 +1,13 @@
+<div class="card bg-dark">
+    <div class="card-header bg-info">
+      <b>Nome provincia selezionata</b> : {{provincia.nome}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title bg-info"><b>Numero identificativo</b> : {{provincia.id}}</h5>
+      <p class="card-text bg-info"><b>Provincia di</b> : {{provincia.nome}} [ {{provincia.sigla}} ]</p>
+    </div>
+    
+    <button type="button" class="btn-sm btn btn-warning" (click)="edit(provincia)">Modifica</button>
+    
+  </div>
+

@@ -1,0 +1,20 @@
+<div class="card text-center">
+    <div class="card-header bg-dark">
+        <input type="text" [(ngModel)]="provincia.nome" placeholder="Aggiungi nome provincia.."><br>
+    </div>
+    <div class="card-body bg-info">
+        <input type="text" [(ngModel)]="provincia.sigla" placeholder="Aggiungi sigla provincia..">
+        <br><br>
+        <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden"></span>
+        </div><button type="button" class="btn btn-primary btn-sm " (click)="newProvincia()">Aggiungi <i
+                class="bi bi-arrow-down-square-fill"></i></button>
+        <div class="spinner-border spinner-border-sm" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+    <div class="card-footer text-muted bg-dark">
+        Compila i campi qui sopra per aggiungere una provincia
+    </div>
+    <small>NOTA : Attenzione all'inserimento di nuove province, se i campi form hanno dei valori o dei formati diversi da quelli accettati, la provincia non verrà aggiunta correttamente</small>
+</div>
