@@ -1,2 +1,2 @@
-# Progetto finale Angular CLI
-Simulazione di un gestionale clienti/province/comuni/fatture
+# Progetto finale
+Web app angular CLI 13 , gestionale di clienti/fatture/province e comuni.
